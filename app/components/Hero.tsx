@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { motion } from 'framer-motion'
 
 const navigation = [
   { name: 'Product', href: '#' },
@@ -17,6 +18,8 @@ export default function Hero() {
   return (
     <div className="bg-gray-50">
       <div className="relative isolate pt-14">
+
+        {/* TOP GRADIENT */}
         <div
           aria-hidden="true"
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
@@ -32,12 +35,22 @@ export default function Hero() {
 
         <div className="py-24 sm:py-32 lg:pb-40">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mx-auto max-w-2xl text-center">
+
+            {/* TEXT BLOCK – FADE IN */}
+            <motion.div
+              className="mx-auto max-w-2xl text-center"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
+            >
               <h1 className="text-4xl font-semibold tracking-tight text-black sm:text-7xl">
-                Die Next-Generation Lösung für dein <h1 className="text-[#00abb8]">Auftragsmanagement</h1>
+                Die Next-Generation Lösung für dein{' '}
+                <span className="text-[#00abb8]">Auftragsmanagement</span>
               </h1>
+
               <p className="mt-8 text-lg font-medium text-gray-500 sm:text-xl/8">
-                Alles aus einer Hand - Vom Erstkontakt bis zur Rechnung. Mit Nexoro hast du deine Aufträge, Kommunikation und Dokumente immer im Blick. Kein lästiges Suchen mehr - alles ist an einem Ort gespeichert.
+                Alles aus einer Hand - Vom Erstkontakt bis zur Rechnung. Mit Nexoro hast du deine Aufträge,
+                Kommunikation und Dokumente immer im Blick. Kein lästiges Suchen mehr – alles ist an einem Ort gespeichert.
               </p>
 
               <div className="mt-10 flex items-center justify-center gap-x-6">
@@ -53,18 +66,23 @@ export default function Hero() {
                   Mehr erfahren →
                 </a>
               </div>
-            </div>
+            </motion.div>
 
-            <img
+            {/* IMAGE – FADE IN WITH DELAY */}
+            <motion.img
               alt="App screenshot"
               src="/img/nexoro.png"
               width={2432}
               height={1442}
               className="mt-16 rounded-md bg-gray-50 shadow-xl ring-1 ring-gray-900/10 sm:mt-24"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9, ease: 'easeOut', delay: 0.3 }}
             />
           </div>
         </div>
 
+        {/* BOTTOM GRADIENT */}
         <div
           aria-hidden="true"
           className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
