@@ -40,56 +40,40 @@ export default function Header() {
   const [dropdownOpen, setDropdownOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
+  // Detect scroll → white header
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10)
     window.addEventListener("scroll", onScroll)
     return () => window.removeEventListener("scroll", onScroll)
   }, [])
 
-  /* ----------------------------------------------------------
-     🔥 HEADER STYLING MODI — WÄHLE HIER DEINEN STYLE 🔥
-     ----------------------------------------------------------
-
-     1️⃣ TRANSPARENT HEADER oben → Weiß beim Scrollen
-     const headerStyle = scrolled || dropdownOpen ? "bg-white shadow-sm" : "bg-transparent";
-
-     2️⃣ FARBE HEADER oben → Weiß beim Scrollen
-     const headerStyle = scrolled || dropdownOpen ? "bg-white shadow-sm" : "bg-[#f8fafa]";
-
-     3️⃣ GRADIENT HEADER oben → Weiß beim Scrollen
-     const headerStyle = scrolled || dropdownOpen 
-        ? "bg-white shadow-sm" 
-        : "bg-gradient-to-b from-[#00abb8]/20 to-transparent";
-
-     👉 Einfach die gewünschte Variante freischalten!
-     ---------------------------------------------------------- */
-
-  //  Aktive Variante (gerne ändern!)
+  // ACTIVE HEADER STYLE
   const headerStyle = scrolled || dropdownOpen
     ? "bg-white shadow-sm"
-    : "bg-gray-50" // <— HIER kannst du z. B. bg-[#f8fafa] ODER gradient einsetzen
-
+    : "bg-gray-50"
 
   return (
     <header className={`sticky top-0 z-10 transition-all duration-300 ${headerStyle}`}>
       <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
-        
+
+        {/* Logo */}
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
-            <img alt="" src="/img/logos/logo.png" className="h-11 w-auto" />
+            <img src="/img/logos/logo.png" alt="Nexoro" className="h-11 w-auto" />
           </a>
         </div>
 
+        {/* Mobile Menu Button */}
         <div className="flex lg:hidden">
           <button
-            type="button"
             onClick={() => setMobileMenuOpen(true)}
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            className="-m-2.5 rounded-md p-2.5 text-gray-700"
           >
-            <Bars3Icon aria-hidden="true" className="size-6" />
+            <Bars3Icon className="size-6" />
           </button>
         </div>
 
+        {/* Desktop Navigation */}
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
           <Popover>
             {({ open }) => {
@@ -102,7 +86,7 @@ export default function Header() {
                     focus:outline-none focus:ring-0"
                   >
                     Funktionen
-                    <ChevronDownIcon aria-hidden="true" className="size-5 text-gray-400" />
+                    <ChevronDownIcon className="size-5 text-gray-400" />
                   </PopoverButton>
 
                   <PopoverPanel
@@ -114,13 +98,12 @@ export default function Header() {
                     <div className="relative bg-white">
                       <div className="mt-4 mx-auto grid max-w-7xl grid-cols-4 gap-x-4 px-6 py-10">
                         {products.map((item) => (
-                          <div key={item.name} className="group relative rounded-lg p-6 text-sm hover:bg-gray-50">
+                          <div key={item.name} className="group relative rounded-lg p-6 hover:bg-gray-50">
                             <div className="flex size-11 items-center justify-center rounded-lg bg-gray-50 group-hover:bg-gray-100">
                               <item.icon className="size-6 text-gray-600 group-hover:text-[#00abb8]" />
                             </div>
                             <a href={item.href} className="mt-6 block font-semibold text-gray-900">
                               {item.name}
-                              <span className="absolute inset-0" />
                             </a>
                             <p className="mt-1 text-gray-600">{item.description}</p>
                           </div>
@@ -151,31 +134,91 @@ export default function Header() {
           <a href="#" className="text-sm font-semibold text-gray-900">Kontakt</a>
         </PopoverGroup>
 
+        {/* Desktop CTA */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="text-sm font-semibold text-white px-6 py-2 rounded-lg" style={{ backgroundColor: '#00abb8' }}>
+          <a
+            href="#"
+            className="text-sm font-semibold text-white px-6 py-2 rounded-lg"
+            style={{ backgroundColor: '#00abb8' }}
+          >
             Demo vereinbaren
           </a>
         </div>
+
       </nav>
 
+      {/* White overlay behind dropdown */}
       {dropdownOpen && (
         <div className="absolute inset-x-0 top-full h-16 bg-white z-0 hidden lg:block"></div>
       )}
 
+      {/* MOBILE MENU */}
       <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
-        <div className="fixed inset-0 z-50" />
-        <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-6 sm:max-w-sm ring-1 ring-gray-200">
+        <div className="fixed inset-0 z-40 bg-black/20 backdrop-blur-sm" />
+
+        <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full sm:max-w-sm bg-white p-6 overflow-y-auto ring-1 ring-gray-200">
 
           <div className="flex items-center justify-between">
-            <img alt="Nexoro" src="/img/logos/logo.png" className="h-11 w-auto" />
+            <img src="/img/logos/logo.png" className="h-11 w-auto" alt="Nexoro" />
             <button onClick={() => setMobileMenuOpen(false)} className="p-2 text-gray-700">
               <XMarkIcon className="size-6" />
             </button>
           </div>
 
-          {/* MOBILE NAV ... unchanged */}
+          <div className="mt-6 flow-root">
+            <div className="-my-6 divide-y divide-gray-200">
+
+              <div className="space-y-2 py-6">
+
+                <Disclosure>
+                  <DisclosureButton className="flex w-full justify-between rounded-lg py-2 px-3 text-base font-semibold text-gray-900 hover:bg-gray-50">
+                    Funktionen
+                    <ChevronDownIcon className="size-5" />
+                  </DisclosureButton>
+
+                  <DisclosurePanel className="mt-2 space-y-2">
+                    {[...products, ...callsToAction].map((item) => (
+                      <a
+                        key={item.name}
+                        href={item.href}
+                        className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold text-gray-900 hover:bg-gray-50"
+                      >
+                        {item.name}
+                      </a>
+                    ))}
+                  </DisclosurePanel>
+                </Disclosure>
+
+                <a href="#" className="block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50">
+                  Features
+                </a>
+
+                <a href="#" className="block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50">
+                  Vorteile
+                </a>
+
+                <a href="#" className="block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50">
+                  Kontakt
+                </a>
+              </div>
+
+              {/* 🔥 MOBILE CTA — Same style as Desktop! */}
+              <div className="py-6">
+                <a
+                  href="#"
+                  className="block w-full text-center text-sm font-semibold text-white px-6 py-3 rounded-lg"
+                  style={{ backgroundColor: '#00abb8' }}
+                >
+                  Demo vereinbaren
+                </a>
+              </div>
+
+            </div>
+          </div>
+
         </DialogPanel>
       </Dialog>
+
     </header>
   )
 }

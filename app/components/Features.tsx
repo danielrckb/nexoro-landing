@@ -1,6 +1,7 @@
 'use client'
 
 import { InboxIcon, TrashIcon, UsersIcon } from '@heroicons/react/24/outline'
+import { motion } from "framer-motion"
 
 const features = [
   // Original 3
@@ -52,7 +53,13 @@ const features = [
 
 export default function Features() {
   return (
-    <div className="bg-gray-50 py-24 sm:py-32">
+    <motion.div
+      className="bg-gray-50 py-24 sm:py-32"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+    >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
         <div className="mx-auto max-w-2xl lg:mx-0">
@@ -69,8 +76,14 @@ export default function Features() {
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
 
             {features.map((feature, i) => (
-              <div key={i} className="flex flex-col">
-
+              <motion.div
+                key={i}
+                className="flex flex-col"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: i * 0.1 }}
+              >
                 <dt className="text-base/7 font-semibold text-gray-900">
                   <div
                     className="mb-6 flex size-10 items-center justify-center rounded-lg"
@@ -83,6 +96,7 @@ export default function Features() {
 
                 <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
                   <p className="flex-auto">{feature.description}</p>
+
                   <p className="mt-6">
                     <a
                       href={feature.href}
@@ -93,14 +107,13 @@ export default function Features() {
                     </a>
                   </p>
                 </dd>
-
-              </div>
+              </motion.div>
             ))}
 
           </dl>
         </div>
 
       </div>
-    </div>
+    </motion.div>
   )
 }
