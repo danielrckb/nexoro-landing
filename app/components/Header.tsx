@@ -92,7 +92,7 @@ export default function Header() {
               return (
                 <>
                   <PopoverButton
-                    className="flex items-center gap-x-1 text-sm font-semibold text-gray-900 focus:outline-none"
+                    className="flex items-center gap-x-1 text-sm font-semibold text-gray-900 focus:outline-none hover:text-gray-900/80 cursor-pointer"
                   >
                     Funktionen
                     <ChevronDownIcon className="size-5 text-gray-400" />
@@ -135,9 +135,9 @@ export default function Header() {
             }}
           </Popover>
 
-          <a href="#" className="text-sm font-semibold text-gray-900">Features</a>
-          <a href="#" className="text-sm font-semibold text-gray-900">Vorteile</a>
-          <a href="#" className="text-sm font-semibold text-gray-900">Kontakt</a>
+          <a href="#" className="text-sm font-semibold text-gray-900 hover:text-gray-900/80">Features</a>
+          <a href="#" className="text-sm font-semibold text-gray-900 hover:text-gray-900/80">Vorteile</a>
+          <a href="#" className="text-sm font-semibold text-gray-900 hover:text-gray-900/80">Kontakt</a>
         </PopoverGroup>
 
         {/* DESKTOP CTA */}
