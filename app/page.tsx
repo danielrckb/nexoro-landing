@@ -1,3 +1,4 @@
+import CTA from "./components/CTA"
 import Features from "./components/Features"
 import FeaturesCards from "./components/FeaturesCards"
 import Header from "./components/Header"
@@ -11,6 +12,7 @@ export default function Home() {
       <Hero />
       <Features />
       <FeaturesCards />
+      <CTA />
     </div>
   )
 }

@@ -33,9 +33,9 @@ const products = [
 ]
 
 const callsToAction = [
-  { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
-  { name: 'Contact sales', href: '#', icon: PhoneIcon },
-  { name: 'View all products', href: '#', icon: RectangleGroupIcon },
+  { name: 'Demo ansehen', href: '#', icon: PlayCircleIcon },
+  { name: 'Kontaktiere uns', href: '#', icon: PhoneIcon },
+  { name: 'Alle Features ansehen', href: '#', icon: RectangleGroupIcon },
 ]
 
 export default function Header() {
