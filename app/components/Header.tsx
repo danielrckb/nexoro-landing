@@ -19,8 +19,11 @@ import {
   FingerPrintIcon,
   SquaresPlusIcon,
   XMarkIcon,
+  PlayCircleIcon,
+  PhoneIcon,
+  RectangleGroupIcon,
 } from '@heroicons/react/24/outline'
-import { ChevronDownIcon, PhoneIcon, PlayCircleIcon, RectangleGroupIcon } from '@heroicons/react/20/solid'
+import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
 const products = [
   { name: 'Analytics', description: 'Get a better understanding where your traffic is coming from', href: '#', icon: ChartPieIcon },
@@ -40,17 +43,13 @@ export default function Header() {
   const [dropdownOpen, setDropdownOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
-  // Detect scroll → white header
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10)
     window.addEventListener("scroll", onScroll)
     return () => window.removeEventListener("scroll", onScroll)
   }, [])
 
-  // ACTIVE HEADER STYLE
-  const headerStyle = scrolled || dropdownOpen
-    ? "bg-white shadow-sm"
-    : "bg-gray-50"
+  const headerStyle = scrolled || dropdownOpen ? "bg-white shadow-sm" : "bg-gray-50"
 
   return (
     <header className={`sticky top-0 z-10 transition-all duration-300 ${headerStyle}`}>
@@ -63,8 +62,19 @@ export default function Header() {
           </a>
         </div>
 
-        {/* Mobile Menu Button */}
-        <div className="flex lg:hidden">
+        {/* MOBILE BUTTON ONLY */}
+        <div className="flex items-center gap-3 lg:hidden">
+
+          {/* 🔥 Small CTA Button next to Logo (mobile only) */}
+          <a
+            href="#"
+            className="text-xs font-semibold text-white px-2 py-2 rounded-lg"
+            style={{ backgroundColor: '#00abb8' }}
+          >
+            Demo vereinbaren
+          </a>
+
+          {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(true)}
             className="-m-2.5 rounded-md p-2.5 text-gray-700"
@@ -73,7 +83,7 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Desktop Navigation */}
+        {/* DESKTOP NAVIGATION */}
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
           <Popover>
             {({ open }) => {
@@ -82,23 +92,19 @@ export default function Header() {
               return (
                 <>
                   <PopoverButton
-                    className="flex items-center gap-x-1 text-sm font-semibold text-gray-900
-                    focus:outline-none focus:ring-0"
+                    className="flex items-center gap-x-1 text-sm font-semibold text-gray-900 focus:outline-none"
                   >
                     Funktionen
                     <ChevronDownIcon className="size-5 text-gray-400" />
                   </PopoverButton>
 
-                  <PopoverPanel
-                    className="absolute inset-x-0 top-full bg-white z-20 transition 
-                    data-closed:-translate-y-1 data-closed:opacity-0"
-                  >
+                  <PopoverPanel className="absolute inset-x-0 top-full bg-white z-20 transition">
                     <div aria-hidden="true" className="absolute inset-0 top-1/2 bg-white shadow-lg ring-1 ring-gray-900/5" />
 
                     <div className="relative bg-white">
                       <div className="mt-4 mx-auto grid max-w-7xl grid-cols-4 gap-x-4 px-6 py-10">
                         {products.map((item) => (
-                          <div key={item.name} className="group relative rounded-lg p-6 hover:bg-gray-50">
+                          <div key={item.name} className="group relative p-6 rounded-lg hover:bg-gray-50">
                             <div className="flex size-11 items-center justify-center rounded-lg bg-gray-50 group-hover:bg-gray-100">
                               <item.icon className="size-6 text-gray-600 group-hover:text-[#00abb8]" />
                             </div>
@@ -134,7 +140,7 @@ export default function Header() {
           <a href="#" className="text-sm font-semibold text-gray-900">Kontakt</a>
         </PopoverGroup>
 
-        {/* Desktop CTA */}
+        {/* DESKTOP CTA */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a
             href="#"
@@ -147,24 +153,27 @@ export default function Header() {
 
       </nav>
 
-      {/* White overlay behind dropdown */}
+      {/* Overlay for dropdown */}
       {dropdownOpen && (
         <div className="absolute inset-x-0 top-full h-16 bg-white z-0 hidden lg:block"></div>
       )}
 
-      {/* MOBILE MENU */}
+      {/* MOBILE MENU PANEL */}
       <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
         <div className="fixed inset-0 z-40 bg-black/20 backdrop-blur-sm" />
 
         <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full sm:max-w-sm bg-white p-6 overflow-y-auto ring-1 ring-gray-200">
 
+          {/* Mobile Header Row */}
           <div className="flex items-center justify-between">
             <img src="/img/logos/logo.png" className="h-11 w-auto" alt="Nexoro" />
+
             <button onClick={() => setMobileMenuOpen(false)} className="p-2 text-gray-700">
               <XMarkIcon className="size-6" />
             </button>
           </div>
 
+          {/* MENU CONTENT */}
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-200">
 
@@ -202,7 +211,7 @@ export default function Header() {
                 </a>
               </div>
 
-              {/* 🔥 MOBILE CTA — Same style as Desktop! */}
+              {/* MOBILE FULL CTA BUTTON */}
               <div className="py-6">
                 <a
                   href="#"
