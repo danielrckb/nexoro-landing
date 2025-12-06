@@ -1,53 +1,53 @@
 'use client'
 
-import { InboxIcon, TrashIcon, UsersIcon } from '@heroicons/react/24/outline'
+import { InboxIcon, DocumentIcon, DocumentCurrencyEuroIcon, UserIcon, PhotoIcon, CheckCircleIcon, } from '@heroicons/react/24/outline'
 import { motion } from "framer-motion"
 
 const features = [
   // Original 3
   {
-    name: 'Unlimited inboxes',
+    name: 'Erstkontakt',
     description:
-      'Non quo aperiam repellendus quas est est. Eos aut dolore aut ut sit nesciunt. Ex tempora quia. Sit nobis consequatur dolores incidunt.',
+      'Ein neuer Kunde meldet sich? Alles startet hier. Erstelle sofort einen Auftrag und speichere alle Informationen zentral.',
+    href: '#',
+    icon: UserIcon,
+  },
+  {
+    name: 'Angebotslegung',
+    description:
+      'Erstelle Angebote schnell und klar. Alle Dokumente bleiben im Auftrag und sind jederzeit griffbereit.',
+    href: '#',
+    icon: DocumentIcon,
+  },
+  {
+    name: 'Kommunikation',
+    description:
+      'Telefonate, Mails, SMS oder WhatsApp - alles wird automatisch im richtigen Auftrag gespeichert.',
     href: '#',
     icon: InboxIcon,
-  },
-  {
-    name: 'Manage team members',
-    description:
-      'Vero eum voluptatem aliquid nostrum voluptatem. Vitae esse natus. Earum nihil deserunt eos quasi cupiditate. A inventore et molestiae natus.',
-    href: '#',
-    icon: UsersIcon,
-  },
-  {
-    name: 'Spam report',
-    description:
-      'Et quod quaerat dolorem quaerat architecto aliquam accusantium. Ex adipisci et doloremque autem quia quam. Quis eos molestiae at iure impedit.',
-    href: '#',
-    icon: TrashIcon,
   },
 
   // Duplicate 3
   {
-    name: 'Unlimited inboxes',
+    name: 'Auftrag',
     description:
-      'Non quo aperiam repellendus quas est est. Eos aut dolore aut ut sit nesciunt. Ex tempora quia. Sit nobis consequatur dolores incidunt.',
+      'Der Kunde sagt Ja? Der Auftrag ist direkt fertig. Alle Informationen sind bereits vorhanden und müssen nicht neu eingegeben werden.',
     href: '#',
-    icon: InboxIcon,
+    icon: CheckCircleIcon,
   },
   {
-    name: 'Manage team members',
+    name: 'Rechnung',
     description:
-      'Vero eum voluptatem aliquid nostrum voluptatem. Vitae esse natus. Earum nihil deserunt eos quasi cupiditate. A inventore et molestiae natus.',
+      'Am Ende steht die Rechnung - einfach und zentral. Erstelle sie direkt im Auftrag, ohne Daten neu einzugeben.',
     href: '#',
-    icon: UsersIcon,
+    icon: DocumentCurrencyEuroIcon,
   },
   {
-    name: 'Spam report',
+    name: 'Foto-Dokumentation',
     description:
-      'Et quod quaerat dolorem quaerat architecto aliquam accusantium. Ex adipisci et doloremque autem quia quam. Quis eos molestiae at iure impedit.',
+      'Fotos von Projekten direkt zum Auftrag hinzufügen für lückenlose Dokumentation und Kundenkommunikation.',
     href: '#',
-    icon: TrashIcon,
+    icon: PhotoIcon,
   },
 ]
 
@@ -63,12 +63,11 @@ export default function Features() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
         <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
-            Stay on top of customer support
+          <h2 className="text-4xl font-semibold tracking-tight text-black sm:text-5xl">
+            Dein kompletter Arbeitsprozess aus einer Hand
           </h2>
           <p className="mt-6 text-lg/8 text-gray-600">
-            Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in
-            accusamus quisquam.
+             Nexoro bringt Ordnung in deinen Prozess - von der ersten Kundenanfrage bis zur finalen Rechnung. 
           </p>
         </div>
 
@@ -103,7 +102,7 @@ export default function Features() {
                       className="text-sm/6 font-semibold hover:opacity-80"
                       style={{ color: '#00abb8' }}
                     >
-                      Learn more <span aria-hidden="true">→</span>
+                      Erfahre mehr <span aria-hidden="true">→</span>
                     </a>
                   </p>
                 </dd>

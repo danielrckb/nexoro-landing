@@ -7,7 +7,7 @@ export default function FeaturesCards() {
           Deploy faster
         </h2>
 
-        <p className="mt-2 max-w-lg text-4xl font-semibold tracking-tight text-pretty text-gray-950 sm:text-5xl">
+        <p className="mt-2 max-w-lg text-4xl font-semibold tracking-tight text-pretty text-black sm:text-5xl">
           Everything you need to deploy your app
         </p>
 
@@ -19,7 +19,7 @@ export default function FeaturesCards() {
             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)] lg:rounded-tl-[calc(2rem+1px)]">
               <img
                 alt=""
-                src="https://tailwindcss.com/plus-assets/img/component-images/bento-01-performance.png"
+                src="img/integrations.png"
                 className="h-80 object-cover object-left"
               />
               <div className="p-10 pt-4">
@@ -43,7 +43,7 @@ export default function FeaturesCards() {
             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-tr-[calc(2rem+1px)]">
               <img
                 alt=""
-                src="https://tailwindcss.com/plus-assets/img/component-images/bento-01-releases.png"
+                src="img/integrations.png"
                 className="h-80 object-cover object-left lg:object-right"
               />
               <div className="p-10 pt-4">
@@ -67,7 +67,7 @@ export default function FeaturesCards() {
             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-bl-[calc(2rem+1px)]">
               <img
                 alt=""
-                src="https://tailwindcss.com/plus-assets/img/component-images/bento-01-speed.png"
+                src="img/integrations.png"
                 className="h-80 object-cover object-left"
               />
               <div className="p-10 pt-4">
@@ -115,7 +115,7 @@ export default function FeaturesCards() {
             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-br-[calc(2rem+1px)]">
               <img
                 alt=""
-                src="https://tailwindcss.com/plus-assets/img/component-images/bento-01-network.png"
+                src="img/integrations.png"
                 className="h-80 object-cover"
               />
               <div className="p-10 pt-4">
