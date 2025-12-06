@@ -18,8 +18,8 @@ export default function Hero() {
   return (
     <div className="bg-gray-50">
       <div className="relative isolate pt-14">
-
-        {/* TOP GRADIENT */}
+{/* 
+        TOP GRADIENT
         <div
           aria-hidden="true"
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
@@ -31,7 +31,7 @@ export default function Hero() {
             }}
             className="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-linear-to-tr from-[#00abb8] to-[#00abb8] opacity-30 sm:left-[calc(50%-30rem)] sm:w-288.75"
           />
-        </div>
+        </div> */}
 
         <div className="py-24 sm:py-32 lg:pb-40">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
