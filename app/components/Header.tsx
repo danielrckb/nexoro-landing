@@ -166,7 +166,7 @@ export default function Header() {
 
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
-              <img alt="Nexoro" src="/img/logos/logo.png" className="h-15 w-auto" />
+              <img alt="Nexoro" src="/img/logos/logo.png" className="h-11 w-auto" />
             </a>
 
             <button onClick={() => setMobileMenuOpen(false)} className="-m-2.5 rounded-md p-2.5 text-gray-700">
