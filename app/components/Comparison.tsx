@@ -1,10 +1,17 @@
 'use client'
 
 import { CheckIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { motion } from "framer-motion"
 
 export default function Comparison() {
   return (
-    <section className="bg-white py-24 sm:py-32">
+    <motion.section
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: true }}
+      className="bg-white py-24 sm:py-32"
+    >
       <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
         
         {/* HEADLINE */}
@@ -154,6 +161,6 @@ export default function Comparison() {
         </div>
 
       </div>
-    </section>
+    </motion.section>
   )
 }
