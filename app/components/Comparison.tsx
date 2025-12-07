@@ -4,7 +4,7 @@ import { CheckIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 export default function Comparison() {
   return (
-    <section className="bg-gray-50 py-24 sm:py-32">
+    <section className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
         
         {/* HEADLINE */}
