@@ -1,3 +1,4 @@
+import Comparison from "./components/Comparison"
 import CTA from "./components/CTA"
 import FAQ from "./components/FAQ"
 import Features from "./components/Features"
@@ -18,6 +19,7 @@ export default function Home() {
       <TextRotation />
       <FeaturesCards />
       <Pricing />
+      <Comparison />
       <FAQ />
       <CTA />
       <Footer />
