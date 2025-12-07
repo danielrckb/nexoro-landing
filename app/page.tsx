@@ -4,6 +4,7 @@ import FeaturesCards from "./components/FeaturesCards"
 import Footer from "./components/Footer"
 import Header from "./components/Header"
 import Hero from "./components/Hero"
+import TextRotation from "./components/TextRotation"
 
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       <Header />
       <Hero />
       <Features />
+      <TextRotation />
       <FeaturesCards />
       <CTA />
       <Footer />
