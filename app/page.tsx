@@ -1,4 +1,5 @@
 import CTA from "./components/CTA"
+import FAQ from "./components/FAQ"
 import Features from "./components/Features"
 import FeaturesCards from "./components/FeaturesCards"
 import Footer from "./components/Footer"
@@ -17,6 +18,7 @@ export default function Home() {
       <TextRotation />
       <FeaturesCards />
       <Pricing />
+      <FAQ />
       <CTA />
       <Footer />
     </div>

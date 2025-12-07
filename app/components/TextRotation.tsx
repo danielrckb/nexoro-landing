@@ -37,13 +37,13 @@ export default function TextRotation() {
   });
 
   const items = [
-    "Projektmanagement",
+    "Auftragverwaltung",
     "Prozesskontrolle",
-    "AI Assistant",
+    "AI Unterstützung",
     "Mitarbeiter Onboarding",
-    "Instant Approvals",
+    "Auftragsabwicklung",
     "Team Zusammenarbeit",
-    "Budgetplanung",
+    "Angebote & Rechnungen",
   ];
 
   return (
