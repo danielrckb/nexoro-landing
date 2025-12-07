@@ -1,5 +1,6 @@
 import Comparison from "./components/Comparison"
 import CTA from "./components/CTA"
+import CTAScroll from "./components/CTAScroll"
 import FAQ from "./components/FAQ"
 import Features from "./components/Features"
 import FeaturesCards from "./components/FeaturesCards"
@@ -25,7 +26,8 @@ export default function Home() {
       <Why />
       <Testimonials />
       <FAQ />
-      <CTA />
+      <CTAScroll />
+      {/* <CTA /> */}
       <Footer />
     </div>
   )
