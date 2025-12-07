@@ -49,7 +49,7 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll)
   }, [])
 
-  const headerStyle = scrolled || dropdownOpen ? "bg-white shadow-sm" : "bg-gray-50"
+  const headerStyle = scrolled || dropdownOpen ? "bg-white shadow-sm" : "bg-white"
 
   return (
     <header className={`sticky top-0 z-10 transition-all duration-300 ${headerStyle}`}>
@@ -57,7 +57,7 @@ export default function Header() {
 
         {/* Logo */}
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
+          <a href="#" className="-m-1.5 p-1.5 rounded-lg">
             <img src="/img/logos/logo.png" alt="Nexoro" className="h-11 w-auto" />
           </a>
         </div>
@@ -65,19 +65,18 @@ export default function Header() {
         {/* MOBILE BUTTON ONLY */}
         <div className="flex items-center gap-3 lg:hidden" >
 
-          {/* 🔥 Small CTA Button next to Logo (mobile only) */}
+          {/* Small CTA Button mobile */}
           <a
             href="#"
-            className="text-xs font-semibold text-white px-2 py-2 rounded-lg"
+            className="text-xs font-semibold text-white px-2 py-2 rounded-lg hover:!bg-[#00abb8]/80"
             style={{ backgroundColor: '#00abb8' }}
           >
             Demo vereinbaren
           </a>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(true)}
-            className="-m-2.5 rounded-md p-2.5 text-gray-700"
+            className="-m-2.5 rounded-md p-2.5 text-gray-700 hover:bg-gray-50"
           >
             <Bars3Icon className="size-6" />
           </button>
@@ -92,7 +91,7 @@ export default function Header() {
               return (
                 <>
                   <PopoverButton
-                    className="flex items-center gap-x-1 text-sm font-semibold text-gray-900 focus:outline-none hover:text-gray-900/80 cursor-pointer"
+                    className="flex items-center gap-x-1 text-sm font-semibold text-gray-900 focus:outline-none hover:bg-gray-50 px-2 py-1 rounded-md"
                   >
                     Funktionen
                     <ChevronDownIcon className="size-5 text-gray-400" />
@@ -135,16 +134,16 @@ export default function Header() {
             }}
           </Popover>
 
-          <a href="#" className="text-sm font-semibold text-gray-900 hover:text-gray-900/80">Features</a>
-          <a href="#" className="text-sm font-semibold text-gray-900 hover:text-gray-900/80">Vorteile</a>
-          <a href="#" className="text-sm font-semibold text-gray-900 hover:text-gray-900/80">Kontakt</a>
+          <a href="#" className="text-sm font-semibold text-gray-900 hover:bg-gray-50 px-2 py-1 rounded-md">Features</a>
+          <a href="#" className="text-sm font-semibold text-gray-900 hover:bg-gray-50 px-2 py-1 rounded-md">Vorteile</a>
+          <a href="#" className="text-sm font-semibold text-gray-900 hover:bg-gray-50 px-2 py-1 rounded-md">Kontakt</a>
         </PopoverGroup>
 
         {/* DESKTOP CTA */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a
             href="#"
-            className="text-sm font-semibold text-white px-6 py-2 rounded-lg"
+            className="text-sm font-semibold text-white px-6 py-2 rounded-lg hover:!bg-[#00abb8]/80"
             style={{ backgroundColor: '#00abb8' }}
           >
             Demo vereinbaren
@@ -164,16 +163,14 @@ export default function Header() {
 
         <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full sm:max-w-sm bg-white p-6 overflow-y-auto ring-1 ring-gray-200">
 
-          {/* Mobile Header Row */}
           <div className="flex items-center justify-between">
             <img src="/img/logos/logo.png" className="h-11 w-auto" alt="Nexoro" />
 
-            <button onClick={() => setMobileMenuOpen(false)} className="p-2 text-gray-700">
+            <button onClick={() => setMobileMenuOpen(false)} className="p-2 text-gray-700 hover:bg-gray-50 rounded-md">
               <XMarkIcon className="size-6" />
             </button>
           </div>
 
-          {/* MENU CONTENT */}
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-200">
 
@@ -211,11 +208,10 @@ export default function Header() {
                 </a>
               </div>
 
-              {/* MOBILE FULL CTA BUTTON */}
               <div className="py-6">
                 <a
                   href="#"
-                  className="block w-full text-center text-sm font-semibold text-white px-6 py-3 rounded-lg"
+                  className="block w-full text-center text-sm font-semibold text-white px-6 py-3 rounded-lg hover:!bg-[#00abb8]/80"
                   style={{ backgroundColor: '#00abb8' }}
                 >
                   Demo vereinbaren

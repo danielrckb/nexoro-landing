@@ -98,7 +98,7 @@ export default function Example() {
             </h3>
 
             <p className="mt-4 flex items-baseline gap-x-2">
-              <span className="text-gray-900 text-5xl font-semibold tracking-tight">
+              <span className="text-black text-5xl font-semibold tracking-tight">
                 {tier.priceMonthly}
               </span>
 

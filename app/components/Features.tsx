@@ -54,7 +54,7 @@ const features = [
 export default function Features() {
   return (
     <motion.div
-      className="bg-gray-50 py-24 sm:py-32"
+      className="bg-white py-24 sm:py-32"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}

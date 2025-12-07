@@ -29,7 +29,7 @@ export default function Hero() {
   const tiltX = useTransform(scrollY, [0, 300], [45, 0])
 
   return (
-    <div className="bg-gray-50">
+    <div className="bg-white">
       <div className="relative isolate pt-14">
 
         <div className="py-24 sm:py-32 lg:pb-40">
@@ -55,13 +55,13 @@ export default function Hero() {
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 <a
                   href="#"
-                  className="rounded-md px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs"
+                  className="rounded-md px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:!bg-[#00abb8]/80"
                   style={{ backgroundColor: '#00abb8' }}
                 >
                   Demo vereinbaren
                 </a>
 
-                <a href="#" className="text-sm font-semibold text-gray-900">
+                <a href="#" className="text-sm font-semibold text-gray-900 hover:bg-gray-50">
                   Mehr erfahren →
                 </a>
               </div>
