@@ -4,11 +4,11 @@ export default function FeaturesCards() {
       <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
 
         <h2 className="text-base/7 font-semibold" style={{ color: "#00abb8" }}>
-          Deploy faster
+          Schneller zum Erfolg
         </h2>
 
         <p className="mt-2 max-w-lg text-4xl font-semibold tracking-tight text-pretty text-black sm:text-5xl">
-          Everything you need to deploy your app
+          Alles, was du brauchst, um deine Prozesse zu optimieren
         </p>
 
         <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
@@ -24,13 +24,14 @@ export default function FeaturesCards() {
               />
               <div className="p-10 pt-4">
                 <h3 className="text-sm/4 font-semibold" style={{ color: "#00abb8" }}>
-                  Performance
+                  Integrationen
                 </h3>
                 <p className="mt-2 text-lg font-medium tracking-tight text-gray-950">
-                  Lightning-fast builds
+                  Nahtlos vernetzt – alles an einem Ort
                 </p>
                 <p className="mt-2 max-w-lg text-sm/6 text-gray-600">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In gravida justo et nulla efficitur, maximus egestas sem pellentesque.
+                  Mit Nexoro verbindest du alle wichtigen Tools, die du täglich nutzt – von E-Mail über Telefonie bis zu Kalender- und Kommunikationstools.
+{/* Alle Informationen fließen zentral zusammen, damit du schneller arbeitest und nichts mehr übersiehst. */}
                 </p>
               </div>
             </div>
@@ -43,25 +44,26 @@ export default function FeaturesCards() {
             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-tr-[calc(2rem+1px)]">
               <img
                 alt=""
-                src="img/integrations.png"
+                src="img/auftrag.png"
                 className="h-80 object-cover object-left lg:object-right"
               />
               <div className="p-10 pt-4">
                 <h3 className="text-sm/4 font-semibold" style={{ color: "#00abb8" }}>
-                  Releases
+                  Auftragsverwaltung
                 </h3>
                 <p className="mt-2 text-lg font-medium tracking-tight text-gray-950">
-                  Push to deploy
+                  Aufträge schneller und intuitiver bearbeiten
                 </p>
                 <p className="mt-2 max-w-lg text-sm/6 text-gray-600">
-                  Curabitur auctor, ex quis auctor venenatis, eros arcu rhoncus massa, laoreet dapibus ex elit vitae odio.
+                  Die strukturierte Auftragserfassung von Nexoro sorgt dafür, dass alle relevanten Daten sofort sichtbar sind.
+{/* Von Kundendaten bis Statusverfolgung – alles ist klar organisiert, leicht erfassbar und in Sekunden aktualisiert. */}
                 </p>
               </div>
             </div>
             <div className="pointer-events-none absolute inset-0 rounded-lg shadow-sm outline outline-black/5 lg:rounded-tr-4xl" />
           </div>
 
-          {/* CARD 3 */}
+          {/* CARD 3
           <div className="relative lg:col-span-2">
             <div className="absolute inset-0 rounded-lg bg-white lg:rounded-bl-4xl" />
             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-bl-[calc(2rem+1px)]">
@@ -86,7 +88,7 @@ export default function FeaturesCards() {
           </div>
 
           {/* CARD 4 */}
-          <div className="relative lg:col-span-2">
+          {/* <div className="relative lg:col-span-2">
             <div className="absolute inset-0 rounded-lg bg-white" />
             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)]">
               <img
@@ -107,10 +109,10 @@ export default function FeaturesCards() {
               </div>
             </div>
             <div className="pointer-events-none absolute inset-0 rounded-lg shadow-sm outline outline-black/5" />
-          </div>
+          </div> */}
 
           {/* CARD 5 */}
-          <div className="relative lg:col-span-2">
+          {/* <div className="relative lg:col-span-2">
             <div className="absolute inset-0 rounded-lg bg-white max-lg:rounded-b-4xl lg:rounded-br-4xl" />
             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-br-[calc(2rem+1px)]">
               <img
@@ -131,7 +133,7 @@ export default function FeaturesCards() {
               </div>
             </div>
             <div className="pointer-events-none absolute inset-0 rounded-lg shadow-sm outline outline-black/5 max-lg:rounded-b-4xl lg:rounded-br-4xl" />
-          </div>
+          </div>  */}
 
         </div>
       </div>
