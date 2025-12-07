@@ -63,7 +63,7 @@ export default function Header() {
         </div>
 
         {/* MOBILE BUTTON ONLY */}
-        <div className="flex items-center gap-3 lg:hidden">
+        <div className="flex items-center gap-3 lg:hidden" >
 
           {/* 🔥 Small CTA Button next to Logo (mobile only) */}
           <a
