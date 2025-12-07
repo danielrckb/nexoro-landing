@@ -7,6 +7,7 @@ import Footer from "./components/Footer"
 import Header from "./components/Header"
 import Hero from "./components/Hero"
 import Pricing from "./components/Pricing"
+import Testimonials from "./components/Testimonials"
 import TextRotation from "./components/TextRotation"
 
 
@@ -20,6 +21,7 @@ export default function Home() {
       <FeaturesCards />
       <Pricing />
       <Comparison />
+      <Testimonials />
       <FAQ />
       <CTA />
       <Footer />
