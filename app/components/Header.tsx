@@ -136,8 +136,8 @@ export default function Header() {
             }}
           </Popover>
 
-          <a href="/#features" className="text-sm font-semibold text-gray-900 hover:bg-gray-50 px-2 py-1 rounded-md">Features</a>
           <a href="/#benefits" className="text-sm font-semibold text-gray-900 hover:bg-gray-50 px-2 py-1 rounded-md">Vorteile</a>
+          <a href="/#pricing" className="text-sm font-semibold text-gray-900 hover:bg-gray-50 px-2 py-1 rounded-md">Preise</a>
           <a href="/kontakt" className="text-sm font-semibold text-gray-900 hover:bg-gray-50 px-2 py-1 rounded-md">Kontakt</a>
         </PopoverGroup>
 
@@ -197,12 +197,12 @@ export default function Header() {
                   </DisclosurePanel>
                 </Disclosure>
 
-                <a href="/#features" className="block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50">
-                  Features
-                </a>
-
                 <a href="/#benefits" className="block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50">
                   Vorteile
+                </a>
+
+                <a href="/#pricing" className="block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50">
+                  Preise
                 </a>
 
                 <a href="/kontakt" className="block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50">
