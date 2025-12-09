@@ -142,10 +142,10 @@ export default function Form() {
           </div>
 
           {/* RIGHT INFO BOXES */}
-          <div className="space-y-8">
+          <div className="space-y-8 flex items-center justify-center flex-col">
 
             {/* Kontaktinformationen */}
-            <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-200">
+            <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-200 w-full">
               <h3 className="text-xl font-semibold text-[#008fa1] mb-4">
                 Kontaktinformationen
               </h3>
@@ -168,7 +168,7 @@ export default function Form() {
             </div>
 
             {/* Bürozeiten */}
-            <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-200">
+            <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-200 w-full">
               <h3 className="text-xl font-semibold text-[#008fa1] mb-4">
                 Bürozeiten
               </h3>
@@ -183,7 +183,7 @@ export default function Form() {
             </div>
 
             {/* Adresse */}
-            <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-200">
+            <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-200 w-full">
               <h3 className="text-xl font-semibold text-[#008fa1] mb-4">
                 Adresse
               </h3>
