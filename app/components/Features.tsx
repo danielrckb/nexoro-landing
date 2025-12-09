@@ -23,7 +23,7 @@ const features = [
     name: 'Kommunikation',
     description:
       'Telefonate, Mails, SMS oder WhatsApp - alles wird automatisch im richtigen Auftrag gespeichert.',
-    href: '#',
+    href: '/funktionen/integrationen',
     icon: InboxIcon,
   },
 
