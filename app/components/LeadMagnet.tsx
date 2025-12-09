@@ -97,7 +97,7 @@ export default function LeadMagnet() {
               disabled
               className="
                 w-full py-3 mt-4 rounded-lg text-white font-semibold 
-                bg-orange-500 hover:bg-orange-600 transition 
+                bg-[#00abb8] hover:bg-[#00abb8]/80 transition 
                 shadow-md cursor-pointer
               "
             >
