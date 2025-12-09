@@ -33,7 +33,7 @@ export default function Form() {
             Kontaktieren Sie uns
           </h2>
           <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-            Haben Sie Fragen zu Nexoro oder benötigen Sie Unterstützung?  
+            Haben Sie Fragen zu Nexoro oder benötigen Sie Unterstützung?
             Wir sind für Sie da und helfen Ihnen gerne weiter.
           </p>
         </div>
@@ -104,18 +104,25 @@ export default function Form() {
               />
 
               {/* Datenschutz */}
-              <label className="flex items-center gap-3 text-gray-600 text-sm">
-                <input
-                  type="checkbox"
-                  required
-                  className="w-4 h-4 border-gray-400"
-                />
-                Ich habe die{" "}
-                <a href="/datenschutz" className="underline text-[#00abb8]">
-                  Datenschutzerklärung
-                </a>{" "}
-                gelesen und stimme der Verarbeitung meiner Daten zu.
+              <label className="flex flex-col md:flex-row md:items-center gap-3 text-gray-600 text-sm leading-relaxed">
+                <div className="flex items-center gap-3">
+                  <input
+                    type="checkbox"
+                    required
+                    className="w-4 h-4 border-gray-400"
+                  />
+                  <span className="md:hidden">Ich stimme zu *</span>
+                </div>
+
+                <p className="md:ml-1">
+                  Ich habe die{" "}
+                  <a href="/datenschutz" className="underline text-[#00abb8]">
+                    Datenschutzerklärung
+                  </a>{" "}
+                  gelesen und stimme der Verarbeitung meiner Daten zu.
+                </p>
               </label>
+
 
               {/* Button */}
               <button
