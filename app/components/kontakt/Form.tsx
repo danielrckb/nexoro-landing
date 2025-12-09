@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { Checkbox } from "@/components/ui/checkbox"
+
 
 export default function Form() {
   const [loading, setLoading] = useState(false);
@@ -106,15 +108,16 @@ export default function Form() {
               {/* Datenschutz */}
               <label className="flex flex-col md:flex-row md:items-center gap-3 text-gray-600 text-sm leading-relaxed">
                 <div className="flex items-center gap-3">
-                  <input
+                  {/* <input
                     type="checkbox"
                     required
                     className="w-4 h-4 border-gray-400"
-                  />
+                  /> */}
+                  <Checkbox className="active:bg-[#00abb8] data-[state=checked]:bg-[#00abb8] border:none outline-0 ring-0 focus:ring-0" ></Checkbox>
                   <span className="md:hidden">Ich stimme zu *</span>
                 </div>
 
-                <p className="md:ml-1">
+                <p className="md:ml-1 ">
                   Ich habe die{" "}
                   <a href="https://darlean.com/de/policy?lang=de" className="underline text-[#00abb8]">
                     Datenschutzerklärung
