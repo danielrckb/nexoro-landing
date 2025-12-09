@@ -91,17 +91,17 @@ export default function IntegrationsHero() {
           {/* CTA */}
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <a
-              href="#kontakt"
+              href="/kontakt"
               className="inline-flex items-center justify-center rounded-md bg-[#00abb8] px-7 py-4 text-base font-semibold text-white shadow hover:bg-[#0097a3] transition"
             >
               Demo vereinbaren
             </a>
 
             <a
-              href="#integrations-list"
+              href="mailto:office@nexoro.net"
               className="text-base font-medium text-gray-700 hover:text-[#007f87] transition"
             >
-              Alle Integrationen ansehen →
+              Weitere Integrationen anfragen
             </a>
           </div>
         </div>
