@@ -1,19 +1,20 @@
 const navigation = {
   support: [
-    { name: 'FAQ', href: '#' },
-    { name: 'Kontakt', href: '#' },
-    { name: 'QuickSupport', href: '#' },
+    { name: 'FAQ', href: '/#faq' },
+    { name: 'Kontakt', href: '/kontakt' },
+    { name: 'QuickSupport', href: '/support' },
   ],
   company: [
-    { name: 'Funktionen', href: '#' },
-    { name: 'Vorteile', href: '#' },
-    { name: 'Preise', href: '#' },
-    { name: 'Demo buchen', href: '#' },
+    { name: 'Funktionen', href: '/#features' },
+    { name: 'Vorteile', href: '/#benefits' },
+    { name: 'Preise', href: '/#pricing' },
+    { name: 'Demo buchen', href: '/kontakt' },
   ],
   legal: [
-    { name: 'Impressum', href: '#' },
-    { name: 'Datenschutz', href: '#' },
-    { name: 'AGB', href: '#' },
+    { name: 'Impressum', href: 'https://www.darlean.de/impressum' },
+    { name: 'Datenschutz', href: 'https://darlean.com/de/policy?lang=de' },
+    { name: 'AGB', href: 'https://darlean.com/de/terms?lang=de' },
+    { name: 'Cookie-Richtlinie', href: '#' },
   ],
 };
 

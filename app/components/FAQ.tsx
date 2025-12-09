@@ -24,7 +24,7 @@ const faqs = [
 
 export default function FAQ() {
   return (
-    <div className="bg-gray-50">
+    <div className="bg-gray-50" id="faq">
       <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
 
         {/* FADE-IN WRAPPER */}

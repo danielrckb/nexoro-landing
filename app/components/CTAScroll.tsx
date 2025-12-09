@@ -72,7 +72,7 @@ export default function CTAScroll() {
           {/* BUTTON */}
           <motion.div style={{ opacity: finalButton }} className="mt-6">
             <a
-              href="#"
+              href="/kontakt"
               className="
                 inline-block 
                 bg-white text-[#008fa1] 

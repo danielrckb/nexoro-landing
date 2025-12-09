@@ -149,7 +149,7 @@ export default function Comparison() {
 
             <div className="mt-10 flex justify-center">
               <a
-                href="#"
+                href="/kontakt"
                 className="px-6 py-3 rounded-lg text-white font-semibold hover:bg-[#00abb8]/80"
                 style={{ backgroundColor: "#00abb8" }}
               >

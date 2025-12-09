@@ -20,22 +20,24 @@ import {
   SquaresPlusIcon,
   XMarkIcon,
   PlayCircleIcon,
-  PhoneIcon,
   RectangleGroupIcon,
+  DevicePhoneMobileIcon,
+  ArchiveBoxIcon,
+  CheckIcon,
 } from '@heroicons/react/24/outline'
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
+import { ChevronDownIcon, PhoneIcon, } from '@heroicons/react/20/solid'
 
 const products = [
-  { name: 'Analytics', description: 'Get a better understanding where your traffic is coming from', href: '#', icon: ChartPieIcon },
-  { name: 'Engagement', description: 'Speak directly to your customers with our engagement tool', href: '#', icon: CursorArrowRaysIcon },
-  { name: 'Security', description: 'Your customers’ data will be safe and secure', href: '#', icon: FingerPrintIcon },
-  { name: 'Integrations', description: 'Your customers’ data will be safe and secure', href: '#', icon: SquaresPlusIcon },
+  { name: 'Auftragsverwaltung', description: 'Behalte alle Projekte & Aufgaben im Blick – von der Anfrage bis zur Abrechnung.', href: '#', icon: CheckIcon },
+  { name: 'Warenwirtschaft', description: 'Verwalte Materialien, Artikel und Bestände zentral an einem Ort. Alles automatisch.', href: '#', icon: ArchiveBoxIcon },
+  { name: 'Kommunikation', description: 'E-Mail, Anrufe, SMS und interne Nachrichten – gespeichert & jederzeit nachvollziehbar.', href: '#', icon: DevicePhoneMobileIcon },
+  { name: 'Integrationen', description: 'Nexoro mit WhatsApp, 3CX und anderen Systemen. Daten fließen automatisch in deine Aufträge ein.', href: '#', icon: SquaresPlusIcon },
 ]
 
 const callsToAction = [
   { name: 'Demo ansehen', href: '#', icon: PlayCircleIcon },
-  { name: 'Kontaktiere uns', href: '#', icon: PhoneIcon },
-  { name: 'Alle Features ansehen', href: '#', icon: RectangleGroupIcon },
+  { name: 'Kontaktiere uns', href: '/kontakt', icon: PhoneIcon },
+  { name: 'Alle Features ansehen', href: '/#features', icon: RectangleGroupIcon },
 ]
 
 export default function Header() {
@@ -57,7 +59,7 @@ export default function Header() {
 
         {/* Logo */}
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5 rounded-lg">
+          <a href="/" className="-m-1.5 p-1.5 rounded-lg">
             <img src="/img/logos/logo.png" alt="Nexoro" className="h-11 w-auto" />
           </a>
         </div>
@@ -67,7 +69,7 @@ export default function Header() {
 
           {/* Small CTA Button mobile */}
           <a
-            href="#"
+            href="/kontakt"
             className="text-xs font-semibold text-white px-2 py-2 rounded-lg hover:!bg-[#00abb8]/80"
             style={{ backgroundColor: '#00abb8' }}
           >
@@ -134,15 +136,15 @@ export default function Header() {
             }}
           </Popover>
 
-          <a href="#" className="text-sm font-semibold text-gray-900 hover:bg-gray-50 px-2 py-1 rounded-md">Features</a>
-          <a href="#" className="text-sm font-semibold text-gray-900 hover:bg-gray-50 px-2 py-1 rounded-md">Vorteile</a>
+          <a href="/#features" className="text-sm font-semibold text-gray-900 hover:bg-gray-50 px-2 py-1 rounded-md">Features</a>
+          <a href="/#benefits" className="text-sm font-semibold text-gray-900 hover:bg-gray-50 px-2 py-1 rounded-md">Vorteile</a>
           <a href="/kontakt" className="text-sm font-semibold text-gray-900 hover:bg-gray-50 px-2 py-1 rounded-md">Kontakt</a>
         </PopoverGroup>
 
         {/* DESKTOP CTA */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a
-            href="#"
+            href="/kontakt"
             className="text-sm font-semibold text-white px-6 py-2 rounded-lg hover:!bg-[#00abb8]/80"
             style={{ backgroundColor: '#00abb8' }}
           >
@@ -195,11 +197,11 @@ export default function Header() {
                   </DisclosurePanel>
                 </Disclosure>
 
-                <a href="#" className="block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50">
+                <a href="/#features" className="block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50">
                   Features
                 </a>
 
-                <a href="#" className="block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50">
+                <a href="/#benefits" className="block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50">
                   Vorteile
                 </a>
 
@@ -210,7 +212,7 @@ export default function Header() {
 
               <div className="py-6">
                 <a
-                  href="#"
+                  href="/kontakt"
                   className="block w-full text-center text-sm font-semibold text-white px-6 py-3 rounded-lg hover:!bg-[#00abb8]/80"
                   style={{ backgroundColor: '#00abb8' }}
                 >

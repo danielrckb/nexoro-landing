@@ -7,7 +7,7 @@ const tiers = [
   {
     name: 'Starter',
     id: 'tier-hobby',
-    href: '#',
+    href: '/kontakt',
     priceMonthly: '€79',
     description: "Perfekt für kleine und mittlere Unternehmen",
     features: ['25 products', 'Up to 10,000 subscribers', 'Advanced analytics', '24-hour support response time'],
@@ -16,7 +16,7 @@ const tiers = [
   {
     name: 'Enterprise',
     id: 'tier-enterprise',
-    href: '#',
+    href: '/kontakt',
     priceMonthly: 'Individuell',
     description: 'Für große Unternehmen mit speziellen Anforderungen',
     features: [
@@ -37,7 +37,7 @@ function classNames(...classes: string[]) {
 
 export default function Example() {
   return (
-    <div className="relative isolate bg-gray-50 px-6 py-24 sm:py-32 lg:px-8">
+    <div className="relative isolate bg-gray-50 px-6 py-24 sm:py-32 lg:px-8" id="pricing">
 
       {/* 🔵 GRADIENT mit Nexoro-Blau */}
       <div aria-hidden="true" className="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl">

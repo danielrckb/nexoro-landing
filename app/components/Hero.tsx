@@ -54,7 +54,7 @@ export default function Hero() {
 
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 <a
-                  href="#"
+                  href="/kontakt"
                   className="rounded-md px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:!bg-[#00abb8]/80"
                   style={{ backgroundColor: '#00abb8' }}
                 >
@@ -62,7 +62,7 @@ export default function Hero() {
                 </a>
 
                 <a
-                  href="#"
+                  href="/#features"
                   className="text-sm font-semibold text-gray-900 hover:bg-gray-50"
                 >
                   Mehr erfahren →
