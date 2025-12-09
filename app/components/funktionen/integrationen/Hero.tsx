@@ -13,7 +13,7 @@ const LOGOS = [
   { src: '/img/logos/whatsapp.png', alt: 'WhatsApp' },
 ]
 
-export default function IntegrationsHero(): JSX.Element {
+export default function IntegrationsHero() {
   return (
     <section className="bg-white">
       <div className="mx-auto max-w-7xl px-6 py-20 lg:py-28">
