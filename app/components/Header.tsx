@@ -136,7 +136,7 @@ export default function Header() {
 
           <a href="#" className="text-sm font-semibold text-gray-900 hover:bg-gray-50 px-2 py-1 rounded-md">Features</a>
           <a href="#" className="text-sm font-semibold text-gray-900 hover:bg-gray-50 px-2 py-1 rounded-md">Vorteile</a>
-          <a href="#" className="text-sm font-semibold text-gray-900 hover:bg-gray-50 px-2 py-1 rounded-md">Kontakt</a>
+          <a href="/kontakt" className="text-sm font-semibold text-gray-900 hover:bg-gray-50 px-2 py-1 rounded-md">Kontakt</a>
         </PopoverGroup>
 
         {/* DESKTOP CTA */}
@@ -203,7 +203,7 @@ export default function Header() {
                   Vorteile
                 </a>
 
-                <a href="#" className="block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50">
+                <a href="/kontakt" className="block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50">
                   Kontakt
                 </a>
               </div>
