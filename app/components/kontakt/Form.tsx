@@ -116,7 +116,7 @@ export default function Form() {
 
                 <p className="md:ml-1">
                   Ich habe die{" "}
-                  <a href="/datenschutz" className="underline text-[#00abb8]">
+                  <a href="https://darlean.com/de/policy?lang=de" className="underline text-[#00abb8]">
                     Datenschutzerklärung
                   </a>{" "}
                   gelesen und stimme der Verarbeitung meiner Daten zu.
