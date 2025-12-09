@@ -31,7 +31,7 @@ const products = [
   { name: 'Auftragsverwaltung', description: 'Behalte alle Projekte & Aufgaben im Blick – von der Anfrage bis zur Abrechnung.', href: '#', icon: CheckIcon },
   { name: 'Warenwirtschaft', description: 'Verwalte Materialien, Artikel und Bestände zentral an einem Ort. Alles automatisch.', href: '#', icon: ArchiveBoxIcon },
   { name: 'Kommunikation', description: 'E-Mail, Anrufe, SMS und interne Nachrichten – gespeichert & jederzeit nachvollziehbar.', href: '#', icon: DevicePhoneMobileIcon },
-  { name: 'Integrationen', description: 'Nexoro mit WhatsApp, 3CX und anderen Systemen. Daten fließen automatisch in deine Aufträge ein.', href: '#', icon: SquaresPlusIcon },
+  { name: 'Integrationen', description: 'Nexoro mit WhatsApp, 3CX und anderen Systemen. Daten fließen automatisch in deine Aufträge ein.', href: '/funktionen/integrationen', icon: SquaresPlusIcon },
 ]
 
 const callsToAction = [

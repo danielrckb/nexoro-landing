@@ -14,37 +14,37 @@ const items: IntegrationItem[] = [
     title: "Microsoft",
     category: "E-Mail & Kalender",
     description: "Synchronisiere E-Mails und Kalenderereignisse automatisch mit Nexoro.",
-    icon: "/img/integrations/microsoft.png",
+    icon: "/img/icons/microsoft.png",
   },
   {
     title: "Google",
     category: "E-Mail & Kalender",
     description: "Verbinde Gmail und Google Kalender nahtlos mit deinen Aufträgen.",
-    icon: "/img/integrations/google.png",
+    icon: "/img/icons/google.png",
   },
   {
     title: "3CX",
     category: "Telefonie",
     description: "Telefonate automatisch protokollieren und direkt im Auftrag speichern.",
-    icon: "/img/integrations/3cx.png",
+    icon: "/img/icons/3cx.png",
   },
   {
     title: "WhatsApp",
     category: "Messaging",
     description: "Empfange und sende WhatsApp-Nachrichten zentral in Nexoro.",
-    icon: "/img/integrations/whatsapp.png",
+    icon: "/img/icons/whatsapp.png",
   },
   {
     title: "SMS",
     category: "Nachrichten",
     description: "Sende automatische Erinnerungen und SMS direkt aus deinen Aufträgen.",
-    icon: "/img/integrations/sms.png",
+    icon: "/img/icons/sms.png",
   },
   {
     title: "Powrbook",
-    category: "Spezialtool",
-    description: "Importiere und synchronisiere Leads, Kontakte und Aufträge aus Powrbook.",
-    icon: "/img/integrations/powrbook.png",
+    category: "Workflow & Notizen ",
+    description: "Analoge Ideen & Gedanken voll automatisiert im Nexoro.",
+    icon: "/img/icons/powrbook.png",
   },
 ];
 
@@ -73,12 +73,12 @@ export default function Integrations() {
 
                   <p className="text-gray-600 mt-4">{item.description}</p>
 
-                  <a
+                  {/* <a
                     href="#"
                     className="inline-flex items-center gap-2 text-[#00abb8] font-semibold mt-4"
                   >
                     Mehr erfahren →
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </motion.div>
@@ -105,12 +105,12 @@ export default function Integrations() {
 
                   <p className="text-gray-600 mt-4">{item.description}</p>
 
-                  <a
+                  {/* <a
                     href="#"
                     className="inline-flex items-center gap-2 text-[#00abb8] font-semibold mt-4"
                   >
                     Mehr erfahren →
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </motion.div>
